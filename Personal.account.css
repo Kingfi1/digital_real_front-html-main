@@ -1,0 +1,251 @@
+﻿@font-face {
+    font-family: 'Lato SemiBold';
+    src: url('../font/Lato SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('../font/Lato Light.woff2') format('woff2');
+}
+css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+    background-color: white; /* Фон страницы белый */
+    color: black; /* Цвет текста черный */
+    font-family: 'Lato Light';
+}
+
+/* Стили для заголовка */
+.title-header {
+    border-bottom: 1px solid black; /* Черная линия под заголовком */
+    display: flex; /* Используем Flexbox для размещения элементов в строку */
+    align-items: center; /* Центрирование элементов по вертикали */
+    padding-left: 20px; /* Отступ от левого края */
+}
+
+.logo {
+    margin-right: 0; /* Убираем отступ справа от логотипа */
+    margin-left:20px;
+}
+img {
+    height: 30px;
+    width: auto;
+}
+
+h1 {
+    margin: 0; /* Убираем отступы для заголовка */
+    height: 30px; /* Задаем высоту заголовку */
+    font-family: 'Lato SemiBold'; /* Шрифт для заголовка */
+    font-size: 18px; /* Пример размера шрифта заголовка */
+    display: flex; /* Flexbox для вертикального центрирования текста */
+    align-items: center; /* Центрирование текста по вертикали */
+}
+
+h2 {
+    margin-left: auto; /* Сдвигаем h2 вправо, чтобы находилось на одной линии */
+    margin-right: 100px; /* Отступ справа, если нужно */
+    height: 30px; /* Задаем высоту подзаголовку */
+    font-family: 'Lato Light'; /* Шрифт для подзаголовка */
+    font-size: 18px; /* Пример размера шрифта подзаголовка */
+    display: flex; /* Flexbox для вертикального центрирования текста */
+    align-items: center; /* Центрирование текста по вертикали */
+}
+
+/* Логотип */
+.logo {
+    display: flex; /* Используем flexbox для разделения элементов */
+    justify-content: space-between; /* Элементы по разным краям */
+    align-items: center; /* Выравнивание по вертикали */
+}
+
+/* Контейнер для основного контента */
+.main-container {
+    padding-top: 10px;
+    display: flex; /* Горизонтальное расположение контейнера и правого блока */
+}
+
+/* Контейнер для sidebar */
+.container {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение двух сайдбаров */
+    width: 150px; /* Фиксированная ширина для контейнера сайдбаров */
+}
+
+/* Сайдбар */
+.sidebar1,
+.sidebar2 {
+    width: 90%; /* Сайдбары занимают всю ширину контейнера */
+    background-color: white; /* Светлый фон */
+    color: #b2b2b2;
+    padding: 25px; /* Отступы внутри сайдбара */
+    height: 200px;
+}
+
+.sidebar2 {
+    border-top: 1px solid #999999; /* Линия разделяющая второй сайдбар */
+}
+
+    /* Стили для ссылок в сайдбарах */
+    .sidebar1 a,
+    .sidebar2 a {
+        display: flex; /* Используем Flexbox для выравнивания */
+        align-items: center; /* Выравнивание по центру по вертикали */
+        margin: 10px 0; /* Отступы между элементами */
+        text-decoration: none; /* Убираем подчеркивание у ссылок */
+        color: black; /* Цвет текста */
+        font-family: 'Lato Light';
+    }
+
+        /* Установка меньшего отступа перед первым элементом */
+        .sidebar1 a:first-child,
+        .sidebar2 a:first-child {
+            margin-top: 5px; /* Меньший отступ сверху для первого элемента */
+        }
+
+    .sidebar1 img,
+    .sidebar2 img {
+        margin-right: 10px; /* Отступ между изображением и текстом */
+        width: 24px; /* Ширина изображения (можно изменить по необходимости) */
+        height: 24px; /* Высота изображения (можно изменить по необходимости) */
+    }
+        /* Контейнер для разделителя */
+        .divider {
+            width: 2px; /* Ширина линии */
+            background-color: #b2b2b2; /* Цвет линии */
+            height: auto; /* Высота автоматически подстраивается */
+            flex-shrink: 0; /* Чтобы линия не сжималась */
+            margin: 0 50px; /* Отступы по горизонтали */
+        }
+
+/* Контейнер для контента */
+
+.content-container {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение дочерних элементов */
+    margin-left: -2px; /* Сдвиг вправо от контейнера */
+}
+
+    .content-container a{
+        padding: 30px; /* Отступ внутри элементов */
+        margin-bottom: 20px; /* Отступ между элементами */
+    }
+
+    .content-container > a:last-child {
+        margin-bottom: 0; /* Убираем отступ у последнего элемента */
+    }
+
+    .horizontal-container {
+        display: flex; /* Группируем элементы по горизонтали */
+        align-items: center; /* Вертикальное выравнивание по центру */
+        justify-content: space-between; /* Распределение элементов по горизонтали */
+        margin-bottom: 20px; /* Отступ снизу для отделения от блока */
+        width: 100%; /* Занять всю ширину родительского контейнера */
+    }
+
+.right-container {
+    padding: 10px; /* Отступ внутри контейнера */
+}
+
+.add-ad {
+    margin-left: 400px;
+    padding: 20px;
+    background-color: white; /* Цвет фона кнопки */
+    color: black; /* Цвет текста кнопки */
+    width: 300px; /* Ширина кнопки */
+    height: 70px; /* Высота кнопки */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Указатель при наведении */
+    display: flex; /* Для центрирования текста кнопки */
+    align-items: center; /* Вертикальное выравнивание текста по центру */
+    justify-content: center; /* Горизонтальное выравнивание текста по центру */
+}
+
+    .add-ad img {
+        height: 50px; /* Установка новой высоты для изображения */
+        width: 50px; /* Установка новой ширины для изображения */
+        margin-right: 10px; /* Отступ между изображением и текстом кнопки */
+    }
+
+/* Стили для селекторов */
+#complexFilter,
+#complexSelect {
+    width: 200px; /* Ширина элементов */
+    height: 50px; /* Высота элементов */
+    border: 1px solid #b2b2b2; /* Рамка вокруг селектов */
+    border-radius: 4px; /* Закругление углов */
+    margin-right: 20px; /* Отступ между селекторами */
+    font-family: 'Lato Light';
+}
+
+/* Стили для разделителя */
+#filter-divider {
+    width: 1px; /* Ширина разделителя */
+    background-color: #b2b2b2; /* Цвет разделителя */
+    height: 100%; /* Высота совпадает с высотой селекторов */
+}
+
+.block-container {
+    width: 100%; /* Заданная ширина контейнера */
+    padding: 10px;
+    border-top: 1px solid #b2b2b2;
+    margin-top: 20px; /* Отступ сверху для отделения от других элементов */
+}
+
+.block {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #b2b2b2;
+    background-color: #ffffff;
+    display: flex; /* Используем flexbox для горизонтального размещения */
+    align-items: center; /* Центрируем по вертикали в блоке */
+}
+
+.r-item-img {
+    width: 120px; /* Ширина контейнера с изображением */
+    height: 80px; /* Высота контейнера */
+    border: 2px solid #b2b2b2; /* Обводка для контейнера */
+    border-radius: 10px; /* Закругление углов */
+    overflow: hidden; /* Обрезаем часть изображения, которая выходит за границы контейнера */
+    display: flex; /* Для выравнивания изображения */
+    align-items: center; /* Центрируем изображение по вертикали */
+    justify-content: center; /* Центрируем изображение по горизонтали */
+}
+
+    .r-item-img img {
+        width: 100%; /* Изображение занимает всю ширину контейнера */
+        height: 100%; /* Изображение занимает всю высоту контейнера */
+        object-fit: cover; /* Заполнение контейнера без искажения пропорций */
+    }
+
+.r-item-info {
+    flex: 1; /* Позволяет текстовой информации занимать оставшееся пространство */
+    margin-left: 15px; /* Отступ слева от текстового блока */
+}
+
+.r-item__title-info {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.r-item__type-build,
+.r-item__address,
+.r-item__categories,
+.r-item__price-block {
+    margin-top: 5px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price-squad {
+    font-size: 14px;
+    color: #999;
+}

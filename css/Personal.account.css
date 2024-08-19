@@ -1,0 +1,199 @@
+﻿@font-face {
+    font-family: 'Lato SemiBold';
+    src: url('../font/Lato SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('../font/Lato Light.woff2') format('woff2');
+}
+css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+    background-color: white; /* Фон страницы белый */
+    color: black; /* Цвет текста черный */
+    font-family: 'Lato Light';
+}
+
+/* Стили для заголовка */
+.title-header {
+    border-bottom: 1px solid #b2b2b2; /* Черная линия под заголовком */
+    display: flex; /* Используем Flexbox для размещения элементов в строку */
+    align-items: center; /* Центрирование элементов по вертикали */
+    padding-left: 20px; /* Отступ от левого края */
+}
+
+.logo {
+    margin-right: 0; /* Убираем отступ справа от логотипа */
+    margin-left:20px;
+}
+logo img {
+    height: 30px;
+    width: auto;
+}
+
+h1 {
+    margin: 0; /* Убираем отступы для заголовка */
+    height: 30px; /* Задаем высоту заголовку */
+    font-family: 'Lato SemiBold'; /* Шрифт для заголовка */
+    font-size: 18px; /* Пример размера шрифта заголовка */
+    display: flex; /* Flexbox для вертикального центрирования текста */
+    align-items: center; /* Центрирование текста по вертикали */
+}
+
+h2 {
+    margin-left: auto; /* Сдвигаем h2 вправо, чтобы находилось на одной линии */
+    margin-right: 100px; /* Отступ справа, если нужно */
+    height: 30px; /* Задаем высоту подзаголовку */
+    font-family: 'Lato Light'; /* Шрифт для подзаголовка */
+    font-size: 18px; /* Пример размера шрифта подзаголовка */
+    display: flex; /* Flexbox для вертикального центрирования текста */
+    align-items: center; /* Центрирование текста по вертикали */
+}
+
+/* Логотип */
+.logo {
+    display: flex; /* Используем flexbox для разделения элементов */
+    justify-content: space-between; /* Элементы по разным краям */
+    align-items: center; /* Выравнивание по вертикали */
+}
+
+/* Контейнер для основного контента */
+.main-container {
+    padding-top: 10px;
+    display: flex; /* Горизонтальное расположение контейнера и правого блока */
+}
+
+/* Контейнер для sidebar */
+.container {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение двух сайдбаров */
+    width: 150px; /* Фиксированная ширина для контейнера сайдбаров */
+}
+
+/* Сайдбар */
+.sidebar1,
+.sidebar2 {
+    width: 90%; /* Сайдбары занимают всю ширину контейнера */
+    background-color: white; /* Светлый фон */
+    color: #b2b2b2;
+    padding: 25px; /* Отступы внутри сайдбара */
+    height: 200px; /* Высота сайдбаров */
+}
+
+.sidebar2 {
+    border-top: 1px solid #999999; /* Линия разделяющая второй сайдбар */
+}
+
+    /* Стили для ссылок в сайдбарах */
+    .sidebar1 a,
+    .sidebar2 a {
+        color: #000000;
+        text-decoration: none;
+        display: flex; /* Используем flex для вертикального выравнивания */
+        align-items: center; /* Вертикальное выравнивание */
+        margin: 20px 0; /* Стандартный отступ между элементами */
+        font-family: 'Lato Light';
+        height: 50px; /* Высота ссылок */
+    }
+
+        /* Установка меньшего отступа перед первым элементом */
+        .sidebar1 a:first-child,
+        .sidebar2 a:first-child {
+            margin-top: 5px; /* Меньший отступ сверху для первого элемента */
+        }
+
+    .sidebar1 img,
+    .sidebar2 img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        /* Контейнер для контента */
+    }
+        .content-container {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение дочерних элементов */
+    margin-left: -2px; /* Сдвиг вправо от контейнера */
+}
+
+    .content-container a{
+        padding: 30px; /* Отступ внутри элементов */
+        margin-bottom: 20px; /* Отступ между элементами */
+    }
+
+    .content-container > a:last-child {
+        margin-bottom: 0; /* Убираем отступ у последнего элемента */
+    }
+
+    .horizontal-container {
+        display: flex; /* Группируем элементы по горизонтали */
+        align-items: center; /* Вертикальное выравнивание по центру */
+        justify-content: space-between; /* Распределение элементов по горизонтали */
+        margin-bottom: 20px; /* Отступ снизу для отделения от блока */
+        width: 100%; /* Занять всю ширину родительского контейнера */
+    }
+
+.right-container {
+    padding: 10px; /* Отступ внутри контейнера */
+}
+
+.button {
+    margin-left: 475px;
+    padding: 0; /* Убираем отступы, чтобы избежать влияния на высоту */
+    background-color: white; /* Цвет фона кнопки */
+    color: black; /* Цвет текста кнопки */
+    width: 200px; /* Ширина кнопки */
+    height: 100px; /* Высота кнопки */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Указатель при наведении */
+    display: flex; /* Для центрирования текста кнопки */
+    align-items: flex-start; /* Вертикальное выравнивание текста по верхнему краю */
+    justify-content: center; /* Горизонтальное выравнивание текста по центру */
+    position: relative; /* Для позиционирования изображения */
+}
+
+    .button img {
+        height: 200%; /* Высота изображения 120% от высоты кнопки */
+        position: absolute; /* Абсолютное позиционирование изображения */
+        top: -30%; /* Смещение вверх на 30%, чтобы изображение выходило за границы кнопки */
+    }
+/* Стили для селекторов */
+#complexFilter,
+#complexSelect {
+    width: 175px; /* Ширина элементов */
+    height: 50px; /* Высота элементов */
+    border: 1px solid #b2b2b2; /* Рамка вокруг селектов */
+    border-radius: 4px; /* Закругление углов */
+    margin-right: 20px; /* Отступ между селекторами */
+    font-family: 'Lato Light';
+}
+
+/* Стили для разделителя */
+#filter-divider {
+    width: 1px; /* Ширина разделителя */
+    background-color: #b2b2b2; /* Цвет разделителя */
+    height: 100%; /* Высота совпадает с высотой селекторов */
+}
+
+/* Контейнер для блока */
+.block-container {
+    width: 112%;
+    padding: 10px;
+    border-top: 1px solid #b2b2b2;
+    margin-top: 20px; /* Отступ сверху для отделения от right-container */
+}
+
+.block {
+    height: 300px;
+    width: 100%; /* Блок занимает всю ширину контейнера */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #b2b2b2;
+    background-color: #ffffff;
+}
